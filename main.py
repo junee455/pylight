@@ -66,7 +66,10 @@ def setMax():
     brFunction[1](1)
 
 def setMin():
-    brFunction[1](0.1)
+    if not sfMode:
+        brFunction[1](0.0001)
+        return
+    brFunction[1](0.01)
 
 
 while cher != 'q':
